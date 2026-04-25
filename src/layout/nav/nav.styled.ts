@@ -2,7 +2,7 @@ import { color } from "@/constant/color";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100dvw;
+  width: 100%;
   background: ${color.a2};
   height: 48px;
   display: flex;
