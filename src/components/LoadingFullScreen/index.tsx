@@ -1,5 +1,5 @@
 import React from "react";
-import LOADING from "./../../assets/img/loading.png";
+import LOADING from "./../../assets/img/logo.png";
 import "./loadingFullScreen.css";
 import { Indicator, Wrapper } from "./loadingFullScreen.styled";
 

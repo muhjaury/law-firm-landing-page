@@ -4,11 +4,12 @@ import styled from "styled-components";
 export const Wrapper = styled.div<{
   $variant: "primary" | "secondary" | "tertiary";
 }>`
+  min-height: 400px;
   width: 100%;
   background: ${({ $variant }) => {
     switch ($variant) {
       case "primary":
-        return color.a1;
+        return color.z1;
       case "secondary":
         return color.a2;
       case "tertiary":
@@ -16,7 +17,6 @@ export const Wrapper = styled.div<{
     }
   }};
   display: flex;
-  align-items: center;
   justify-content: center;
 
   p,
@@ -29,7 +29,7 @@ export const Wrapper = styled.div<{
     color: ${({ $variant }) => {
       switch ($variant) {
         case "primary":
-          return color.a2;
+          return color.a3;
         case "secondary":
           return color.a1;
         case "tertiary":
@@ -40,6 +40,7 @@ export const Wrapper = styled.div<{
 `;
 
 export const Content = styled.div`
+  position: relative;
   width: 1200px;
   padding: 16px 16px;
 

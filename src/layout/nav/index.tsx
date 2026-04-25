@@ -1,8 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
+import HEADER_LOGO from "./../../assets/img/logo.png";
 import MENU from "./../../assets/svg/menu.svg";
+import CLOSE from "./../../assets/svg/close.svg";
 import {
   Content,
   DesktopNavButtonsWrapper,
+  HeaderIcon,
+  HeaderLogoWrapper,
   MenuButton,
   MobileNavButtonsWrapper,
   NavbarItems,
@@ -42,14 +46,20 @@ export default function Navbar() {
   return (
     <Wrapper $isScrolled={isScrolled}>
       <Content>
-        <Title>Nuzul Qadriy, S.H.</Title>
+        <HeaderLogoWrapper>
+          <HeaderIcon src={HEADER_LOGO.src} />
+          <Title>Nuzul Qadriy, S.H.</Title>
+        </HeaderLogoWrapper>
         <DesktopNavButtonsWrapper>
           <NavbarItems>Tentang Kami</NavbarItems>
           <NavbarItems>Layanan</NavbarItems>
           <NavbarItems>Kontak</NavbarItems>
         </DesktopNavButtonsWrapper>
         <MobileNavButtonsWrapper>
-          <MenuButton src={MENU.src} onClick={handleMenuClick} />
+          <MenuButton
+            src={isActiveSideBar ? CLOSE.src : MENU.src}
+            onClick={handleMenuClick}
+          />
         </MobileNavButtonsWrapper>
       </Content>
       <SideBarWrapper $isActiveSideBar={isActiveSideBar}>

@@ -31,10 +31,21 @@ export const Content = styled.div`
   }
 `;
 
+export const HeaderLogoWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HeaderIcon = styled.img`
+  height: 40px;
+`;
+
 export const Title = styled.div`
   font-size: 24px;
   font-weight: 600;
-  color: ${color.a1};
+  color: ${color.z1};
 `;
 
 export const DesktopNavButtonsWrapper = styled.div`
@@ -56,9 +67,10 @@ export const MobileNavButtonsWrapper = styled.div`
 `;
 
 export const NavbarItems = styled.div`
-  font-size: 20px;
+  margin: auto;
+  font-size: 16px;
   font-weight: 600;
-  color: ${color.a1};
+  color: ${color.z1};
   cursor: pointer;
 `;
 
@@ -74,7 +86,7 @@ export const SideBarWrapper = styled.div<{ $isActiveSideBar: boolean }>`
   z-index: 2;
   position: fixed;
   top: 48px;
-  width: 100dvw;
+  width: 100%;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   height: fit-content;
@@ -89,4 +101,5 @@ export const SideBarWrapper = styled.div<{ $isActiveSideBar: boolean }>`
 
 export const SideBarItem = styled.div`
   cursor: pointer;
+  color: ${color.z1};
 `;

@@ -2,83 +2,43 @@
 
 import { Section } from "@/components";
 import CoreLayout from "@/layout";
-import {
-  AboutMeWrapper,
-  ProfileDescription,
-  ProfilePicture,
-} from "./main.styled";
+import COVER from "./../../assets/img/cover.png";
 import PROFILE from "./../../assets/img/profile.jpeg";
+import {
+  CoverWrapper,
+  CoverPicture,
+  CoverCard,
+  CoverDescription,
+  ProfilePicture,
+  CoverTitle,
+} from "./main.styled";
 
 export default function Main() {
   return (
     <CoreLayout>
       <Section variant="secondary">
-        <AboutMeWrapper>
-          <ProfilePicture src={PROFILE.src} />
-          <ProfileDescription>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-            <p>Welcome to the main page of the application.</p>
-            <h1>Main Page</h1>
-          </ProfileDescription>
-        </AboutMeWrapper>
+        <CoverWrapper>
+          <CoverPicture src={COVER.src} />
+          <CoverCard>
+            <CoverTitle>
+              Perlindungan Hukum Terpercaya untuk Ketenangan Anda.
+            </CoverTitle>
+            <CoverDescription>
+              “Dengan pengalaman luas dan integritas tinggi, kami siap
+              mendampingi setiap langkah hukum Anda melalui solusi yang tepat
+              sasaran dan profesional.”
+            </CoverDescription>
+          </CoverCard>
+        </CoverWrapper>
       </Section>
       <Section>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
+        <p>Sample Text</p>
       </Section>
-      <Section variant="secondary">
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
+      <Section variant="tertiary">
+        <CoverWrapper>
+          <ProfilePicture src={PROFILE.src} />
+          <CoverDescription></CoverDescription>
+        </CoverWrapper>
       </Section>
     </CoreLayout>
   );
