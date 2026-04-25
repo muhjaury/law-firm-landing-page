@@ -1,9 +1,11 @@
 import { color } from "@/constant/color";
+import { DISABLE_IMAGE_STYLED } from "@/constant/variables";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ $isScrolled: boolean }>`
   width: 100%;
-  background: ${color.a2};
+  background: ${({ $isScrolled }) =>
+    $isScrolled ? "rgba(26, 32, 38, 0.8)" : color.a2};
   height: 48px;
   display: flex;
   align-items: center;
@@ -63,5 +65,28 @@ export const NavbarItems = styled.div`
 export const MenuButton = styled.img`
   height: 32px;
   width: 32px;
+  cursor: pointer;
+  ${DISABLE_IMAGE_STYLED}
+`;
+
+export const SideBarWrapper = styled.div<{ $isActiveSideBar: boolean }>`
+  display: ${({ $isActiveSideBar }) => ($isActiveSideBar ? "flex" : "none")};
+  z-index: 2;
+  position: fixed;
+  top: 48px;
+  width: 100dvw;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  height: fit-content;
+  background: ${color.a4};
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: ${color.a1};
+`;
+
+export const SideBarItem = styled.div`
   cursor: pointer;
 `;

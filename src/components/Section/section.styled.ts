@@ -2,11 +2,11 @@ import { color } from "@/constant/color";
 import styled from "styled-components";
 
 export const Wrapper = styled.div<{
-  variant: "primary" | "secondary" | "tertiary";
+  $variant: "primary" | "secondary" | "tertiary";
 }>`
   width: 100%;
-  background: ${({ variant }) => {
-    switch (variant) {
+  background: ${({ $variant }) => {
+    switch ($variant) {
       case "primary":
         return color.a1;
       case "secondary":
@@ -26,8 +26,8 @@ export const Wrapper = styled.div<{
   h3,
   h4,
   h5 {
-    color: ${({ variant }) => {
-      switch (variant) {
+    color: ${({ $variant }) => {
+      switch ($variant) {
         case "primary":
           return color.a2;
         case "secondary":

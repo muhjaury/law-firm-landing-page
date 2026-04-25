@@ -8,7 +8,7 @@ type TSection = {
 
 function Section({ children, variant = "primary" }: TSection) {
   return (
-    <Wrapper variant={variant}>
+    <Wrapper $variant={variant}>
       <Content>{children}</Content>
     </Wrapper>
   );
