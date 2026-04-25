@@ -7,5 +7,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: right;
   background: ${color.a2};
-  color: ${color.z1};
+  color: ${color.a1};
+  font-size: 12px;
 `;
