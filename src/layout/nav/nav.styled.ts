@@ -94,9 +94,13 @@ export const SideBarWrapper = styled.div<{ $isActiveSideBar: boolean }>`
   flex-direction: column;
   gap: 24px;
   padding: 16px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: ${color.a1};
+
+  @media all and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SideBarItem = styled.div`

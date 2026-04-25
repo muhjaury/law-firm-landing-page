@@ -14,17 +14,8 @@ export const CoverWrapper = styled.div`
   }
 `;
 
-export const ProfilePicture = styled.img`
-  width: 320px;
-  height: fit-content;
-  ${DISABLE_IMAGE_STYLED}
-
-  @media all and (min-width: 768px) {
-    width: 460px;
-  }
-`;
-
 export const CoverPicture = styled.img`
+  height: 240px;
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +28,8 @@ export const CoverPicture = styled.img`
 `;
 
 export const CoverCard = styled.div`
-  width: 400px;
+  margin-top: 160px;
+  width: 300px;
   border-radius: 8px;
   padding: 16px;
   z-index: 2;
@@ -45,14 +37,24 @@ export const CoverCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media all and (min-width: 768px) {
+    margin-top: unset;
+    width: 400px;
+    font-size: 32px;
+  }
 `;
 
 export const CoverTitle = styled.div`
   line-height: 30px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   color: ${color.a1};
   cursor: default;
+
+  @media all and (min-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const CoverDescription = styled.div`
@@ -61,6 +63,10 @@ export const CoverDescription = styled.div`
   font-weight: 600;
   color: ${color.a2};
   cursor: default;
+
+  @media all and (min-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const ButtonDescription = styled.div`
@@ -69,4 +75,14 @@ export const ButtonDescription = styled.div`
 
 export const ButtonArrow = styled.img`
   height: 16px;
+`;
+
+export const ProfilePicture = styled.img`
+  width: 320px;
+  height: fit-content;
+  ${DISABLE_IMAGE_STYLED}
+
+  @media all and (min-width: 768px) {
+    width: 460px;
+  }
 `;

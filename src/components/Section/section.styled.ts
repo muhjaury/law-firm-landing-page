@@ -42,7 +42,7 @@ export const Wrapper = styled.div<{
 export const Content = styled.div`
   position: relative;
   width: 1200px;
-  padding: 16px 16px;
+  padding: 32px 16px;
 
   @media all and (min-width: 768px) {
     padding: 16px 32px;
