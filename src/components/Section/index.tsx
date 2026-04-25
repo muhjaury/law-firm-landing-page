@@ -2,13 +2,14 @@ import React from "react";
 import { Content, Wrapper } from "./section.styled";
 
 type TSection = {
-  variant?: "primary" | "secondary" | "tertiary";
   children: any;
+  id?: string;
+  variant?: "primary" | "secondary" | "tertiary";
 };
 
-function Section({ children, variant = "primary" }: TSection) {
+function Section({ children, id, variant = "primary" }: TSection) {
   return (
-    <Wrapper $variant={variant}>
+    <Wrapper $variant={variant} id={id}>
       <Content>{children}</Content>
     </Wrapper>
   );

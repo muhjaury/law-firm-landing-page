@@ -47,9 +47,13 @@ export const HeaderIcon = styled.img`
 `;
 
 export const Title = styled.div`
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   color: ${color.z1};
+
+  @media all and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const DesktopNavButtonsWrapper = styled.div`

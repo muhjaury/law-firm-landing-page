@@ -40,11 +40,13 @@ export const Wrapper = styled.div<{
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 1200px;
-  padding: 32px 16px;
+  padding: 64px 16px 32px;
 
   @media all and (min-width: 768px) {
-    padding: 16px 32px;
+    padding: 72px 32px 32px;
   }
 `;

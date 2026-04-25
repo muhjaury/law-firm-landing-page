@@ -5,4 +5,5 @@ export const color = {
   a4: "#120e07",
   a5: "#EEF2F5",
   z1: "#ffffff",
+  z2: "#fafafa",
 };

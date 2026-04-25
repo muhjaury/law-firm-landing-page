@@ -13,11 +13,22 @@ import {
   CoverPicture,
   CoverTitle,
   CoverWrapper,
+  ProfileCard,
+  ProfileDescriptionDescription,
+  ProfileDescriptionTitle,
+  ProfileDescriptionWrapper,
   ProfilePicture,
+  SectionTitleWrapper,
+  SectionTitle,
+  ProfileWrapper,
   StatisticCard,
   StatisticDescription,
   StatisticTitle,
   StatisticWrapper,
+  ServicesWrapper,
+  ServicesCard,
+  ServicesTitle,
+  ServicesDescription,
 } from "./main.styled";
 
 export default function Main() {
@@ -54,11 +65,96 @@ export default function Main() {
           </StatisticCard>
         </StatisticWrapper>
       </Section>
-      <Section variant="secondary">
-        <CoverWrapper>
+      <Section variant="secondary" id="tentang-kami">
+        <SectionTitleWrapper>
+          <SectionTitle>Tentang Kami</SectionTitle>
+        </SectionTitleWrapper>
+        <ProfileWrapper>
           <ProfilePicture src={PROFILE.src} />
-          <CoverDescription></CoverDescription>
-        </CoverWrapper>
+          <ProfileDescriptionWrapper>
+            <ProfileCard>
+              <ProfileDescriptionTitle>Profil Singkat</ProfileDescriptionTitle>
+              <ProfileDescriptionDescription>
+                Kantor Hukum Nuzul Qadriy, S.H. & Rekan adalah firma hukum yang
+                bergerak di bidang litigasi dan non-litigasi, dengan fokus pada
+                penyelesaian perkara secara efektif, efisien, dan profesional.
+                Kami berkomitmen memberikan pelayanan hukum yang mengedepankan
+                keadilan, integritas, dan kerahasiaan klien.
+              </ProfileDescriptionDescription>
+              <ProfileDescriptionTitle>Visi</ProfileDescriptionTitle>
+              <ProfileDescriptionDescription>
+                Menjadi Kantor Hukum yang mengedepankan integritas dan inovasi
+                teknologi dalam memberikan kepastian hukum.
+              </ProfileDescriptionDescription>
+            </ProfileCard>
+          </ProfileDescriptionWrapper>
+        </ProfileWrapper>
+      </Section>
+      <Section id="layanan-kami">
+        <SectionTitleWrapper>
+          <SectionTitle $variant="secondary">Layanan Kami</SectionTitle>
+        </SectionTitleWrapper>
+        <ServicesWrapper>
+          <ServicesCard>
+            <ServicesTitle>Hukum Perdata</ServicesTitle>
+            <ServicesDescription>
+              Menangani berbagai sengketa perdata seperti wanprestasi,
+              perjanjian, dan gugatan hukum lainnya
+            </ServicesDescription>
+          </ServicesCard>
+          <ServicesCard>
+            <ServicesTitle>Hukum Pidana</ServicesTitle>
+            <ServicesDescription>
+              Pendampingan hukum dalam perkara pidana dari penyelidikan hingga
+              persidangan
+            </ServicesDescription>
+          </ServicesCard>
+          <ServicesCard>
+            <ServicesTitle>Hukum Bisnis</ServicesTitle>
+            <ServicesDescription>
+              Penyelesaian konflik bisnis, perusahaan, dan perjanjian komersial
+            </ServicesDescription>
+          </ServicesCard>
+          <ServicesCard>
+            <ServicesTitle>Hukum Keluarga</ServicesTitle>
+            <ServicesDescription>
+              Menangani perceraian, warisan, hak asuh anak, dan permasalahan
+              keluarga lainnya
+            </ServicesDescription>
+          </ServicesCard>
+        </ServicesWrapper>
+        <SectionTitleWrapper>
+          <SectionTitle $variant="secondary">
+            Mengapa Memilih Kami?
+          </SectionTitle>
+        </SectionTitleWrapper>
+        <ServicesWrapper>
+          <ServicesCard>
+            <ServicesTitle>Berpengalaman</ServicesTitle>
+            <ServicesDescription>
+              Kami telah menangani berbagai perkara dengan tingkat keberhasilan
+              yang tinggi.
+            </ServicesDescription>
+          </ServicesCard>
+          <ServicesCard>
+            <ServicesTitle>Profesional</ServicesTitle>
+            <ServicesDescription>
+              Tim kami terdiri dari advokat yang kompeten dan berintegritas.
+            </ServicesDescription>
+          </ServicesCard>
+          <ServicesCard>
+            <ServicesTitle>Terpercaya</ServicesTitle>
+            <ServicesDescription>
+              Kami menjaga kerahasiaan klien dan memberikan layanan terbaik.
+            </ServicesDescription>
+          </ServicesCard>
+          <ServicesCard>
+            <ServicesTitle>Responsif</ServicesTitle>
+            <ServicesDescription>
+              Kami siap membantu Anda dengan cepat dan solusi yang tepat.
+            </ServicesDescription>
+          </ServicesCard>
+        </ServicesWrapper>
       </Section>
     </CoreLayout>
   );

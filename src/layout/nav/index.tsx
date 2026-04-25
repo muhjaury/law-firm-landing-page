@@ -35,37 +35,62 @@ export default function Navbar() {
     };
   }, []);
 
-  const handleMenuClick = useCallback(() => {
+  const handleMenuButtonClick = useCallback(() => {
     setIsActiveSideBar(!isActiveSideBar);
   }, [isActiveSideBar]);
 
-  const handleSideBarItemClick = useCallback(() => {
+  const handleMenuItemClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView();
+
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const handleSideBarItemClick = (id: string) => {
     setIsActiveSideBar(false);
-  }, []);
+    handleMenuItemClick(id);
+  };
 
   return (
     <Wrapper $isScrolled={isScrolled}>
       <Content>
         <HeaderLogoWrapper>
           <HeaderIcon src={HEADER_LOGO.src} />
-          <Title>Nuzul Qadriy, S.H.</Title>
+          <Title>Nuzul Qadriy, S.H. & Rekan</Title>
         </HeaderLogoWrapper>
         <DesktopNavButtonsWrapper>
-          <NavbarItems>Tentang Kami</NavbarItems>
-          <NavbarItems>Layanan</NavbarItems>
-          <NavbarItems>Kontak</NavbarItems>
+          <NavbarItems onClick={() => handleMenuItemClick("tentang-kami")}>
+            Tentang Kami
+          </NavbarItems>
+          <NavbarItems onClick={() => handleMenuItemClick("layanan-kami")}>
+            Layanan
+          </NavbarItems>
+          <NavbarItems onClick={() => handleMenuItemClick("kontak")}>
+            Kontak
+          </NavbarItems>
         </DesktopNavButtonsWrapper>
         <MobileNavButtonsWrapper>
           <MenuButton
             src={isActiveSideBar ? CLOSE.src : MENU.src}
-            onClick={handleMenuClick}
+            onClick={handleMenuButtonClick}
           />
         </MobileNavButtonsWrapper>
       </Content>
       <SideBarWrapper $isActiveSideBar={isActiveSideBar}>
-        <SideBarItem onClick={handleSideBarItemClick}>Tentang Kami</SideBarItem>
-        <SideBarItem onClick={handleSideBarItemClick}>Layanan</SideBarItem>
-        <SideBarItem onClick={handleSideBarItemClick}>Kontak</SideBarItem>
+        <SideBarItem onClick={() => handleSideBarItemClick("tentang-kami")}>
+          Tentang Kami
+        </SideBarItem>
+        <SideBarItem onClick={() => handleSideBarItemClick("layanan-kami")}>
+          Layanan
+        </SideBarItem>
+        <SideBarItem onClick={() => handleSideBarItemClick("kontak")}>
+          Kontak
+        </SideBarItem>
       </SideBarWrapper>
     </Wrapper>
   );
