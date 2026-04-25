@@ -39,7 +39,11 @@ export const HeaderLogoWrapper = styled.div`
 `;
 
 export const HeaderIcon = styled.img`
-  height: 40px;
+  height: 24px;
+
+  @media all and (min-width: 768px) {
+    height: 40px;
+  }
 `;
 
 export const Title = styled.div`
@@ -104,7 +108,8 @@ export const SideBarWrapper = styled.div<{ $isActiveSideBar: boolean }>`
   }
 `;
 
-export const SideBarItem = styled.div`
+export const SideBarItem = styled.span`
+  width: fit-content;
   cursor: pointer;
   color: ${color.z1};
 `;
