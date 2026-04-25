@@ -156,6 +156,11 @@ export default function Main() {
           </ServicesCard>
         </ServicesWrapper>
       </Section>
+      <Section id="kontak" variant="tertiary">
+        <SectionTitleWrapper>
+          <SectionTitle>Hubungi Kami</SectionTitle>
+        </SectionTitleWrapper>
+      </Section>
     </CoreLayout>
   );
 }

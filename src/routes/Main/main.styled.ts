@@ -107,7 +107,7 @@ export const StatisticCard = styled.div`
 export const StatisticTitle = styled.span`
   font-size: 32px;
   font-weight: 600;
-  color: ${color.a1};
+  color: ${color.a1} !important;
 
   @media all and (min-width: 768px) {
     font-size: 48px;
