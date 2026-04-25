@@ -5,8 +5,63 @@ export const Wrapper = styled.div`
   width: 100dvw;
   background: ${color.a2};
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  z-index: 5;
+  top: 0;
 
   @media all and (min-width: 768px) {
     height: 72px;
   }
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px;
+
+  @media all and (min-width: 768px) {
+    padding: 16px 32px;
+  }
+`;
+
+export const Title = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  color: ${color.a1};
+`;
+
+export const DesktopNavButtonsWrapper = styled.div`
+  display: none;
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    gap: 40px;
+  }
+`;
+
+export const MobileNavButtonsWrapper = styled.div`
+  display: flex;
+  gap: 16px;
+
+  @media all and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const NavbarItems = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  color: ${color.a1};
+  cursor: pointer;
+`;
+
+export const MenuButton = styled.img`
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
 `;
