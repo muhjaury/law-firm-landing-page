@@ -60,6 +60,7 @@ export const DesktopNavButtonsWrapper = styled.div`
 export const MobileNavButtonsWrapper = styled.div`
   display: flex;
   gap: 16px;
+  align-items: center;
 
   @media all and (min-width: 768px) {
     display: none;
