@@ -1,4 +1,5 @@
+import Button from "./Button";
 import LoadingFullScreen from "./LoadingFullScreen";
 import Section from "./Section";
 
-export { LoadingFullScreen, Section };
+export { Button, LoadingFullScreen, Section };

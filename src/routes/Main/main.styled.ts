@@ -38,21 +38,35 @@ export const CoverPicture = styled.img`
 
 export const CoverCard = styled.div`
   width: 400px;
-  border-radius: 4px;
-  padding: 8px;
+  border-radius: 8px;
+  padding: 16px;
   z-index: 2;
   background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 export const CoverTitle = styled.div`
+  line-height: 30px;
   font-size: 32px;
   font-weight: 600;
   color: ${color.a1};
+  cursor: default;
 `;
 
 export const CoverDescription = styled.div`
-  margin-top: 24px;
+  line-height: 24px;
   font-size: 20px;
   font-weight: 600;
-  color: ${color.a4};
+  color: ${color.a2};
+  cursor: default;
+`;
+
+export const ButtonDescription = styled.div`
+  color: ${color.z1};
+`;
+
+export const ButtonArrow = styled.img`
+  height: 16px;
 `;
