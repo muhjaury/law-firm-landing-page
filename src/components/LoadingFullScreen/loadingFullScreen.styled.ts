@@ -18,9 +18,9 @@ export const Indicator = styled.div`
   height: 56px;
   width: 56px;
   border-radius: 50%;
-  border: 4px solid transparent;
-  border-top: 4px solid ${color.a2};
-  border-right: 4px solid ${color.a2};
-  border-bottom: 4px solid ${color.a2};
+  border: 2px solid transparent;
+  border-top: 2px solid ${color.a2};
+  border-right: 2px solid ${color.a2};
+  border-bottom: 2px solid ${color.a2};
   animation: ${spin} 1s linear infinite;
 `;
