@@ -14,6 +14,10 @@ import {
   CoverTitle,
   CoverWrapper,
   ProfilePicture,
+  StatisticCard,
+  StatisticDescription,
+  StatisticTitle,
+  StatisticWrapper,
 } from "./main.styled";
 
 export default function Main() {
@@ -39,7 +43,16 @@ export default function Main() {
         </CoverWrapper>
       </Section>
       <Section>
-        <p>Sample Text</p>
+        <StatisticWrapper>
+          <StatisticCard>
+            <StatisticTitle>500+ </StatisticTitle>
+            <StatisticDescription>Kasus Selesai</StatisticDescription>
+          </StatisticCard>
+          <StatisticCard>
+            <StatisticTitle>5+ </StatisticTitle>
+            <StatisticDescription>Tahun Pengalaman</StatisticDescription>
+          </StatisticCard>
+        </StatisticWrapper>
       </Section>
       <Section variant="secondary">
         <CoverWrapper>

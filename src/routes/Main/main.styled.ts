@@ -77,6 +77,48 @@ export const ButtonArrow = styled.img`
   height: 16px;
 `;
 
+export const StatisticWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    gap: 32px;
+  }
+`;
+
+export const StatisticCard = styled.div`
+  padding: 16px;
+  border-left: 4px solid ${color.a1};
+  border-right: 4px solid ${color.a1};
+  border-radius: 20px;
+`;
+
+export const StatisticTitle = styled.span`
+  font-size: 32px;
+  font-weight: 600;
+  color: ${color.a1};
+
+  @media all and (min-width: 768px) {
+    font-size: 48px;
+  }
+`;
+
+export const StatisticDescription = styled.span`
+  font-size: 24px;
+  font-weight: 600;
+  color: ${color.a1};
+
+  @media all and (min-width: 768px) {
+    font-size: 32px;
+  }
+`;
+
 export const ProfilePicture = styled.img`
   width: 320px;
   height: fit-content;
