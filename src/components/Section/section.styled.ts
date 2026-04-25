@@ -6,7 +6,6 @@ export const Wrapper = styled.div<{
 }>`
   width: 100%;
   background: ${({ variant }) => {
-    console.log(variant);
     switch (variant) {
       case "primary":
         return color.a1;
@@ -19,6 +18,25 @@ export const Wrapper = styled.div<{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: ${({ variant }) => {
+      switch (variant) {
+        case "primary":
+          return color.a2;
+        case "secondary":
+          return color.a1;
+        case "tertiary":
+          return color.a1;
+      }
+    }};
+  }
 `;
 
 export const Content = styled.div`

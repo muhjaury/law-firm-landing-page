@@ -6,6 +6,27 @@ import CoreLayout from "@/layout";
 export default function Main() {
   return (
     <CoreLayout>
+      <Section variant="secondary">
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+        <p>Welcome to the main page of the application.</p>
+        <h1>Main Page</h1>
+      </Section>
       <Section>
         <h1>Main Page</h1>
         <p>Welcome to the main page of the application.</p>
@@ -26,41 +47,6 @@ export default function Main() {
         <h1>Main Page</h1>
         <p>Welcome to the main page of the application.</p>
         <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
-        <h1>Main Page</h1>
-        <p>Welcome to the main page of the application.</p>
       </Section>
     </CoreLayout>
   );
