@@ -268,11 +268,13 @@ export const ServicesDescription = styled.div`
 export const ContactWrapper = styled.div`
   height: 100%;
   display: flex;
+  flex-direction: column;
   gap: 16px;
   justify-content: center;
   align-items: center;
 
   @media all and (min-width: 768px) {
+    flex-direction: row;
     margin-top: 8px;
     gap: 24px;
   }

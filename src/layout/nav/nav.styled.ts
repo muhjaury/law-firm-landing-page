@@ -117,3 +117,15 @@ export const SideBarItem = styled.span`
   cursor: pointer;
   color: ${color.z1};
 `;
+
+export const ScrollToTopWrapper = styled.div`
+  z-index: 5;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+`;
+
+export const ScrollToTopIcon = styled.img`
+  height: 40px;
+  cursor: pointer;
+`;
