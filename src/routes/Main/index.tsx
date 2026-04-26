@@ -1,11 +1,11 @@
 "use client";
 
-import { Button, Section } from "@/components";
+import { Button, Input, Section, TextArea } from "@/components";
 import CoreLayout from "@/layout";
 import COVER from "./../../assets/img/cover.png";
 import EMAIL from "./../../assets/img/email.png";
-import PHONE from "./../../assets/img/phone.png";
 import LOCATION from "./../../assets/img/location.png";
+import PHONE from "./../../assets/img/phone.png";
 import PROFILE from "./../../assets/img/profile.jpeg";
 import UP_RIGHT from "./../../assets/img/up-right.png";
 import {
@@ -15,6 +15,7 @@ import {
   ContactAddressIconLabelWrapper,
   ContactAddressValue,
   ContactAddressWrapper,
+  ContactFormCard,
   ContactFormWrapper,
   ContactWrapper,
   CoverCard,
@@ -176,7 +177,17 @@ export default function Main() {
           <SectionTitle>Hubungi Kami</SectionTitle>
         </SectionTitleWrapper>
         <ContactWrapper>
-          <ContactFormWrapper>WA</ContactFormWrapper>
+          <ContactFormWrapper>
+            <ContactFormCard>
+              <Input placeholder="Nama Lengkap" />
+              <Input placeholder="Email" />
+              <TextArea placeholder="Pesan Anda" />
+              <Button>
+                <ButtonDescription>Kirim Pesan</ButtonDescription>
+                <ButtonArrow src={UP_RIGHT.src} />
+              </Button>
+            </ContactFormCard>
+          </ContactFormWrapper>
           <ContactAddressWrapper>
             <ContactAddressIconLabelWrapper>
               <ContactAddressIcon src={EMAIL.src} />

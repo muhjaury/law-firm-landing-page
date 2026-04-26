@@ -269,19 +269,38 @@ export const ContactWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
   align-items: center;
 
   @media all and (min-width: 768px) {
     flex-direction: row;
     margin-top: 8px;
-    gap: 24px;
   }
 `;
 
 export const ContactFormWrapper = styled.div`
   flex: 1;
+  height: 100%;
+  width: 100%;
+  padding: unset;
+
+  @media all and (min-width: 768px) {
+    padding: 16px;
+  }
+`;
+
+export const ContactFormCard = styled.div`
+  height: 100%;
+  width: 100%;
+  background: ${color.z1};
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-left: 4px solid ${color.a1};
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 export const ContactAddressWrapper = styled.div`
