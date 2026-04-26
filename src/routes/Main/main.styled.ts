@@ -317,6 +317,7 @@ export const ContactAddressIconLabelWrapper = styled.div`
 
 export const ContactAddressIcon = styled.img`
   height: 20px;
+  ${DISABLE_IMAGE_STYLED}
 
   @media all and (min-width: 768px) {
     height: 24px;

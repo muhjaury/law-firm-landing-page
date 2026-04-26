@@ -128,4 +128,5 @@ export const ScrollToTopWrapper = styled.div`
 export const ScrollToTopIcon = styled.img`
   height: 40px;
   cursor: pointer;
+  ${DISABLE_IMAGE_STYLED}
 `;
