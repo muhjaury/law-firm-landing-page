@@ -264,3 +264,40 @@ export const ServicesDescription = styled.div`
     font-size: 16px;
   }
 `;
+
+export const ContactWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+  @media all and (min-width: 768px) {
+    margin-top: 8px;
+    gap: 24px;
+  }
+`;
+
+export const ContactFormWrapper = styled.div`
+  flex: 1;
+`;
+
+export const ContactAddressWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const ContactAddressIconLabelWrapper = styled.div`
+  display: flex;
+  gap: 16px;
+`;
+
+export const ContactAddressIcon = styled.img`
+  height: 24px;
+`;
+
+export const ContactAddressValue = styled.div`
+  color: ${color.z1};
+`;

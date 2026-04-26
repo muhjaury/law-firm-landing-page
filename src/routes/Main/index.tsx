@@ -3,11 +3,20 @@
 import { Button, Section } from "@/components";
 import CoreLayout from "@/layout";
 import COVER from "./../../assets/img/cover.png";
+import EMAIL from "./../../assets/img/email.png";
+import PHONE from "./../../assets/img/phone.png";
+import LOCATION from "./../../assets/img/location.png";
 import PROFILE from "./../../assets/img/profile.jpeg";
 import UP_RIGHT from "./../../assets/img/up-right.png";
 import {
   ButtonArrow,
   ButtonDescription,
+  ContactAddressIcon,
+  ContactAddressIconLabelWrapper,
+  ContactAddressValue,
+  ContactAddressWrapper,
+  ContactFormWrapper,
+  ContactWrapper,
   CoverCard,
   CoverDescription,
   CoverPicture,
@@ -18,17 +27,17 @@ import {
   ProfileDescriptionTitle,
   ProfileDescriptionWrapper,
   ProfilePicture,
-  SectionTitleWrapper,
-  SectionTitle,
   ProfileWrapper,
+  SectionTitle,
+  SectionTitleWrapper,
+  ServicesCard,
+  ServicesDescription,
+  ServicesTitle,
+  ServicesWrapper,
   StatisticCard,
   StatisticDescription,
   StatisticTitle,
   StatisticWrapper,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesTitle,
-  ServicesDescription,
 } from "./main.styled";
 
 export default function Main() {
@@ -160,6 +169,26 @@ export default function Main() {
         <SectionTitleWrapper>
           <SectionTitle>Hubungi Kami</SectionTitle>
         </SectionTitleWrapper>
+        <ContactWrapper>
+          <ContactFormWrapper>WA</ContactFormWrapper>
+          <ContactAddressWrapper>
+            <ContactAddressIconLabelWrapper>
+              <ContactAddressIcon src={EMAIL.src} />
+              <ContactAddressValue>qadriynuzul7@gmail.com</ContactAddressValue>
+            </ContactAddressIconLabelWrapper>{" "}
+            <ContactAddressIconLabelWrapper>
+              <ContactAddressIcon src={PHONE.src} />
+              <ContactAddressValue>+6282399402547</ContactAddressValue>
+            </ContactAddressIconLabelWrapper>{" "}
+            <ContactAddressIconLabelWrapper>
+              <ContactAddressIcon src={LOCATION.src} />
+              <ContactAddressValue>
+                Jl. Bambu Runcing No.14, Kelurahan Bumi Harapan, Kecamatan
+                Bacukiki Barat, Kota Parepare
+              </ContactAddressValue>
+            </ContactAddressIconLabelWrapper>
+          </ContactAddressWrapper>
+        </ContactWrapper>
       </Section>
     </CoreLayout>
   );
