@@ -41,6 +41,12 @@ import {
 } from "./main.styled";
 
 export default function Main() {
+  const handleCoverButtonClick = () => {
+    window.open(
+      "https://wa.me/6282399402547?text=Halo+Saya+ingin+konsultasi+hukum.",
+    );
+  };
+
   return (
     <CoreLayout>
       <Section variant="secondary">
@@ -55,7 +61,7 @@ export default function Main() {
               mendampingi setiap langkah hukum Anda melalui solusi yang tepat
               sasaran dan profesional.”
             </CoverDescription>
-            <Button>
+            <Button onClick={handleCoverButtonClick}>
               <ButtonDescription>Hubungi Kami</ButtonDescription>
               <ButtonArrow src={UP_RIGHT.src} />
             </Button>

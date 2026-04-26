@@ -297,9 +297,18 @@ export const ContactAddressIconLabelWrapper = styled.div`
 `;
 
 export const ContactAddressIcon = styled.img`
-  height: 24px;
+  height: 20px;
+
+  @media all and (min-width: 768px) {
+    height: 24px;
+  }
 `;
 
 export const ContactAddressValue = styled.div`
+  font-size: 14px;
   color: ${color.z1};
+
+  @media all and (min-width: 768px) {
+    font-size: 16px;
+  }
 `;
