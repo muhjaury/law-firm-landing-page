@@ -290,7 +290,7 @@ export const ContactFormWrapper = styled.div`
   }
 `;
 
-export const ContactFormCard = styled.div`
+export const ContactFormCard = styled.form`
   height: 100%;
   width: 100%;
   background: ${color.z1};

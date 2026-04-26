@@ -2,6 +2,7 @@
 
 import { Button, Input, Section, TextArea } from "@/components";
 import CoreLayout from "@/layout";
+import { Controller, useForm } from "react-hook-form";
 import COVER from "./../../assets/img/cover.png";
 import EMAIL from "./../../assets/img/email.png";
 import LOCATION from "./../../assets/img/location.png";
@@ -42,10 +43,24 @@ import {
 } from "./main.styled";
 
 export default function Main() {
+  const { control, handleSubmit, reset } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
   const handleCoverButtonClick = () => {
     window.open(
-      "https://wa.me/6282399402547?text=Halo+Saya+ingin+konsultasi+hukum.",
+      "https://wa.me/6282399402547?text=Halo%2C+saya+ingin+konsultasi+hukum.",
     );
+  };
+
+  const onSubmit = (data: { name: string; email: string; message: string }) => {
+    const message = data.message.replaceAll("\n", "%0A");
+    const text = `Halo%2C+saya+ingin+konsultasi+hukum.%0A%0ANama%3A+${data.name}%0AEmail%3A+${data.email}%0APesan%3A%0A%0A${message}`;
+    window.open(`https://wa.me/6282399402547?text=${text}`);
   };
 
   return (
@@ -178,10 +193,44 @@ export default function Main() {
         </SectionTitleWrapper>
         <ContactWrapper>
           <ContactFormWrapper>
-            <ContactFormCard>
-              <Input placeholder="Nama Lengkap" />
-              <Input placeholder="Email" />
-              <TextArea placeholder="Pesan Anda" />
+            <ContactFormCard onSubmit={handleSubmit(onSubmit)}>
+              <Controller
+                name="name"
+                control={control}
+                rules={{ required: true }}
+                render={({ field: { value, onChange } }) => (
+                  <Input
+                    placeholder="Nama Lengkap"
+                    value={value}
+                    onChange={onChange}
+                  />
+                )}
+              />
+              <Controller
+                name="email"
+                control={control}
+                rules={{ required: true }}
+                render={({ field: { value, onChange } }) => (
+                  <Input
+                    placeholder="Email"
+                    value={value}
+                    onChange={onChange}
+                    type="email"
+                  />
+                )}
+              />
+              <Controller
+                name="message"
+                control={control}
+                rules={{ required: true }}
+                render={({ field: { value, onChange } }) => (
+                  <TextArea
+                    placeholder="Pesan Anda"
+                    value={value}
+                    onChange={onChange}
+                  />
+                )}
+              />
               <Button>
                 <ButtonDescription>Kirim Pesan</ButtonDescription>
                 <ButtonArrow src={UP_RIGHT.src} />
